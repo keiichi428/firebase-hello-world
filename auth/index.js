@@ -27,7 +27,8 @@ window.addEventListener('load', e => {
             let currentUserDoc;
             // Check sign-in status
             if (!currentUser) {
-                console.error(firebase.auth().currentUser)
+                console.error(firebase.auth().currentUser);
+                logMeIn();
                 return;
             }
 
@@ -38,4 +39,8 @@ window.addEventListener('load', e => {
         })
 
 
-})
+});
+
+const logMeIn = () => {
+    window.location = './signin.html'
+}
